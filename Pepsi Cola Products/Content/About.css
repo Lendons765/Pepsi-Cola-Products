@@ -1,0 +1,71 @@
+﻿/* ------------------ HERO ------------------ */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s ease, opacity 1.5s ease;
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    color: white;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+/* Trigger fade-in on load */
+.hero-loaded .hero-img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero-loaded .hero-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ------------------ SECTION ANIMATION ------------------ */
+.section-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+    .section-fade.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+/* ------------------ IMAGE BOX ------------------ */
+.border-rounded-shadow {
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .border-rounded-shadow:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.15);
+    }
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 991px) {
+    .hero-content {
+        text-align: center;
+    }
+}

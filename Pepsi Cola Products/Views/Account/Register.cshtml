@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="register-right">
+    <div class="register-card">
+
+        <h2>Create Account</h2>
+        <p class="sub-text">
+            Already have an account?
+            <a href="@Url.Action("Login","Account")">Sign in</a>
+        </p>
+
+        <form method="post" action="/Account/Register">
+
+            <div class="form-row">
+                <input type="text" name="FirstName" placeholder="First Name" required />
+                <input type="text" name="LastName" placeholder="Last Name" required />
+            </div>
+
+            <div class="form-row">
+                <input type="email" name="Email" placeholder="Email Address" required />
+                @*<input type="text" name="phonenumber" placeholder="Phone Number" required />*@
+            </div>
+
+            <div class="form-row">
+                <input type="text" name="username" placeholder="username" required />
+                <input type="password" name="Password" placeholder="Password" required />
+            </div>
+
+            @*<input type="date" name="birthdate" id="birthdate" required />*@
+
+
+            <button type="submit">Register</button>
+
+            <div class="message">@ViewBag.Message</div>
+        </form>
+
+    </div>
+</div>

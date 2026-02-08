@@ -1,0 +1,291 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<link rel="stylesheet" href="~/Content/Homepage.css" />
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <img src="~/Resources/Images/Pepsi-logo.png" class="img-fluid mb-3" style="max-width:45px;" alt="Pepsi Logo">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarText">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("About", "Home")">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+            </ul>
+
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#address">
+                Order Now
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="address" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow">
+
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body text-center p-4">
+                <!-- Pepsi Logo -->
+                <img src="~/Resources/Images/Pepsi-logo.png" class="img-fluid mb-3" style="max-width:160px;" alt="Pepsi Logo">
+
+                <h2 id="addressModalLabel" class="fw-bold mb-2">Sign In or Sign Up</h2>
+                <p class="text-muted mb-4">Please log in or create an account to continue your Pepsi order.</p>
+
+                <div class="d-grid gap-3 col-10 mx-auto">
+                    <a href="@Url.Action("Register", "Account")" class="btn btn-primary btn-lg">Sign Up</a>
+                    <a href="@Url.Action("Login", "Account")" class="btn btn-outline-primary btn-lg">Sign In</a>
+                </div>
+
+                <div class="mt-4 small text-muted">
+                    By continuing, you agree to Pepsi’s <a href="#" class="text-decoration-underline">Terms & Conditions</a> and <a href="#" class="text-decoration-underline">Privacy Policy</a>.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- HERO -->
+<div class="container-fluid hero-section p-0">
+    <div class="row g-0 min-vh-100">
+
+        <div class="col-lg-6">
+            <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300034663e97e62092ac.png"
+                 class="hero-img"
+                 alt="">
+        </div>
+
+        <div class="col-lg-6 hero-overlay">
+
+
+            <div class="hero-content">
+                <h1 class="fw-bold display-6 mb-4">
+                    Pepsi-Cola Products Philippines Inc.
+                </h1>
+
+                <p class="fs-5 fw-medium">
+                    PCPPI is the exclusive manufacturer of PepsiCo beverages in the Philippines.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<section class="snap-start">
+    <div class="container-fluid min-vh-100 position-relative p-0 bg-primary-custom">
+
+        <!-- Radial Gradient -->
+        <div class="gradient-bg position-absolute top-0 start-0 w-100 h-100 rounded-circle"></div>
+
+        <div class="position-relative d-flex flex-column justify-content-between h-100">
+
+            <!-- TEXT + BUTTON -->
+            <div class="px-4 px-xl-5 py-4 py-xl-5">
+                <h2 class="fw-bold text-white mb-3 display-6 display-xl-4">
+                    The Brands you love
+                </h2>
+
+                <a href="https://pepsiphilippines.com/brand"
+                   class="btn btn-light btn-lg position-relative overflow-hidden pepsi-btn mt-4">
+                    <span class="btn-text">See all Brands</span>
+                    <span class="arrow right-arrow">→</span>
+                    <span class="arrow left-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- IMAGES -->
+            <div class="d-flex flex-column align-items-md-center mt-3">
+
+                <!-- BRANDS -->
+                <div class="brands-scroll d-flex align-items-end justify-content-center overflow-auto px-4">
+
+                    <!-- Gatorade -->
+                    <div class="brand-item scroll-animate duration-200 transform md:hover:-translate-y-20" style="--delay:0s">
+                        <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300320163e985012e4ea.png" alt="Gatorade">
+                    </div>
+
+                    <!-- Premier Water -->
+                    <div class="brand-item scroll-animate duration-200 transform md:hover:-translate-y-20" style="--delay:.1s">
+                        <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300302763e984a3322db.png" alt="Premier Water">
+                    </div>
+
+                    <!-- Sting -->
+                    <div class="brand-item scroll-animate duration-200 transform md:hover:-translate-y-20" style="--delay:.2s">
+                        <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300292263e98462c39b5.png" alt="Sting">
+                    </div>
+
+                    <!-- Pepsi -->
+                    <div class="brand-item scroll-animate duration-200 transform md:hover:-translate-y-20" style="--delay:.3s">
+                        <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300244863e98350d2844.png" alt="Pepsi">
+                    </div>
+
+                    <!-- Mountain Dew -->
+                    <div class="brand-item scroll-animate duration-200 transform md:hover:-translate-y-20" style="--delay:.4s">
+                        <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300240963e98329b4aa6.png" alt="Mountain Dew">
+                    </div>
+
+                    <!-- Mirinda -->
+                    @*<div class="brand-item scroll-animate duration-200 transform md:hover:-translate-y-20" style="--delay:.5s">
+                            <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300232363e982fb80229.png" alt="Mirinda">
+                        </div>*@
+
+                    <!-- Gatorade Variant -->
+                    <div class="brand-item scroll-animate duration-200 transform md:hover:-translate-y-20" style="--delay:.6s">
+                        <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/10112023081432652659680c0e1.png" alt="Gatorade Variant">
+                    </div>
+
+                </div>
+
+                <!-- WOODEN BOARD -->
+                <img src="https://pepsiphilippines.com/images/wooden-board.png"
+                     class="img-fluid w-100 mt-n5 scroll-animate"
+                     alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="vh-100">
+    <div id="heroCarousel"
+         class="carousel slide carousel-fade h-100"
+         data-bs-ride="carousel"
+         data-bs-interval="3000"
+         data-bs-pause="false"
+         data-bs-wrap="true">
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="6"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="7"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+                <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/sliders/1213202304015265792cb0704dd.jpg"
+                     class="d-block w-100 h-100 object-fit-cover">
+            </div>
+
+            <div class="carousel-item h-100">
+                <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/sliders/09212023043910650bc8ee7c057.jpg"
+                     class="d-block w-100 h-100 object-fit-cover">
+            </div>
+
+            <div class="carousel-item h-100">
+                <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/sliders/10112023080417652657012f229.jpg"
+                     class="d-block w-100 h-100 object-fit-cover">
+            </div>
+
+            <div class="carousel-item h-100">
+                <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/sliders/09212023043910650bc8eeaed3a.jpg"
+                     class="d-block w-100 h-100 object-fit-cover">
+            </div>
+
+            <div class="carousel-item h-100">
+                <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/sliders/0420202301562664409bca34f0c.jpg"
+                     class="d-block w-100 h-100 object-fit-cover">
+            </div>
+
+            <div class="carousel-item h-100">
+                <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/sliders/0213202300072263e97f3a6e5ed.jpg"
+                     class="d-block w-100 h-100 object-fit-cover">
+            </div>
+
+            <div class="carousel-item h-100">
+                <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/sliders/09212023043910650bc8eebb8aa.jpg"
+                     class="d-block w-100 h-100 object-fit-cover">
+            </div>
+
+            <div class="carousel-item h-100">
+                <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/sliders/0213202300072263e97f3aa7007.jpg"
+                     class="d-block w-100 h-100 object-fit-cover">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+
+
+
+<footer class="w-100">
+    <!-- Top blue stripe -->
+    <div class="w-100" style="height: 20px; background-color: #005CB4;"></div>
+
+    <!-- Red main footer -->
+    <div class="bg-danger text-white py-5">
+        <div class="container text-center">
+
+            <!-- Social icons -->
+            <div class="mb-4 d-flex justify-content-center gap-3">
+                <a href="#"><img src="https://pepsiphilippines.com/images/logo/fb.png" class="img-fluid" style="height:40px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.25)'" onmouseout="this.style.transform='scale(1)'" alt="Facebook"></a>
+                <a href="#"><img src="https://pepsiphilippines.com/images/logo/ig.png" class="img-fluid" style="height:40px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.25)'" onmouseout="this.style.transform='scale(1)'" alt="Instagram"></a>
+                <a href="#"><img src="https://pepsiphilippines.com/images/logo/tw.png" class="img-fluid" style="height:40px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.25)'" onmouseout="this.style.transform='scale(1)'" alt="Twitter"></a>
+            </div>
+
+            <!-- Navigation links -->
+            <div class="mb-3 d-flex justify-content-center flex-wrap gap-2">
+                <a href="/" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Home</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/about" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">About</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/brand" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Brands</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/media" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Media</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/career-application/careers" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Careers</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/contact-us" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Contact</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/partners" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Partners</a>
+            </div>
+
+            <!-- Privacy Policy -->
+            <div class="mb-3">
+                <a href="https://pepsiphilippines.com/dataprivacy" class="text-white text-decoration-none" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Privacy Policy</a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mb-2 small">PCPPI. All rights reserved.</div>
+
+            <!-- Powered by -->
+            <div class="mb-0 small d-flex justify-content-center align-items-center">
+                Powered by:
+                <a href="https://ragoa.com.ph/" target="_blank" class="ms-2">
+                    <img src="https://pepsiphilippines.com/images/ragoa-white-text.webp" class="img-fluid" style="height:24px;" alt="Ragoa">
+                </a>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="~/Scripts/Homepage.js"></script>

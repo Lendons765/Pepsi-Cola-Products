@@ -1,0 +1,137 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<link rel="stylesheet" href="~/Content/About.css" />
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <img src="~/Resources/Images/Pepsi-logo.png" class="img-fluid mb-3" style="max-width:50px;" alt="Pepsi Logo">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarText">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="@Url.Action("Index" , "Home")">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("About", "Home")">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+            </ul>
+
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#address">
+                Order Now
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid hero-section p-0">
+    <div class="row g-0 min-vh-100">
+
+        <div class="col-lg-6">
+            <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300034663e97e62092ac.png"
+                 class="hero-img"
+                 alt="">
+        </div>
+
+        <div class="col-lg-6 hero-overlay">
+
+
+            <div class="hero-content">
+                <h1 class="fw-bold display-5 mb-4">
+                    Pepsi-Cola Products Philippines Inc.
+                </h1>
+
+                <p class="fs-5 fw-medium">
+                    PCPPI is the exclusive manufacturer of PepsiCo beverages in the Philippines.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<section class="py-5 section-fade">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Image -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300105163e9800beb87c.png"
+                     class="img-fluid border-rounded-shadow"
+                     alt="PCPPI Image">
+            </div>
+
+            <!-- Text inside box -->
+            <div class="col-lg-6">
+                <div class="p-4 border rounded-3 shadow-sm bg-white border-rounded-shadow">
+                    <p class="text-muted mb-3">
+                        Pepsi-Cola Products Philippines Inc. (PCPPI) is the exclusive manufacturer...
+                    </p>
+                    <p class="text-muted mb-0">
+                        Pepsi-Cola Products Philippines Inc. (PCPPI) is the exclusive manufacturer of PepsiCo beverages in the Philippines, with a relationship spanning 70 years. PCPPI's principal stockholders are Lotte Corporation, Lotte Chilsung Beverage Co. Ltd., and Quaker Global Investments B.V. PCPPI manufactures and sells well-known beverage brands: Pepsi-Cola, Mountain Dew, 7-Up, Mirinda, Mug, Gatorade, Tropicana, Lipton, Sting, Premier, Milkis, and Aquafina. It has established 13 regional operations sites across the country, serving around 20,000 direct customers that reach 740,000 outlets, and providing livelihood and employment through its extensive distribution network. <br>
+                        <br>
+                        PCPPI is committed to create a positive impact on society with programs focused on employee and community empowerment, responsible and ethical operations, and environmental sustainability.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="w-100">
+    <!-- Top blue stripe -->
+    <div class="w-100" style="height: 20px; background-color: #005CB4;"></div>
+
+    <!-- Red main footer -->
+    <div class="bg-danger text-white py-5">
+        <div class="container text-center">
+
+            <!-- Social icons -->
+            <div class="mb-4 d-flex justify-content-center gap-3">
+                <a href="#"><img src="https://pepsiphilippines.com/images/logo/fb.png" class="img-fluid" style="height:40px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.25)'" onmouseout="this.style.transform='scale(1)'" alt="Facebook"></a>
+                <a href="#"><img src="https://pepsiphilippines.com/images/logo/ig.png" class="img-fluid" style="height:40px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.25)'" onmouseout="this.style.transform='scale(1)'" alt="Instagram"></a>
+                <a href="#"><img src="https://pepsiphilippines.com/images/logo/tw.png" class="img-fluid" style="height:40px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.25)'" onmouseout="this.style.transform='scale(1)'" alt="Twitter"></a>
+            </div>
+
+            <!-- Navigation links -->
+            <div class="mb-3 d-flex justify-content-center flex-wrap gap-2">
+                <a href="/" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Home</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/about" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">About</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/brand" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Brands</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/media" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Media</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/career-application/careers" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Careers</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/contact-us" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Contact</a>
+                <span class="text-white">.</span>
+                <a href="https://pepsiphilippines.com/partners" class="text-white text-decoration-none mx-2" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Partners</a>
+            </div>
+
+            <!-- Privacy Policy -->
+            <div class="mb-3">
+                <a href="https://pepsiphilippines.com/dataprivacy" class="text-white text-decoration-none" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">Privacy Policy</a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mb-2 small">PCPPI. All rights reserved.</div>
+
+            <!-- Powered by -->
+            <div class="mb-0 small d-flex justify-content-center align-items-center">
+                Powered by:
+                <a href="https://ragoa.com.ph/" target="_blank" class="ms-2">
+                    <img src="https://pepsiphilippines.com/images/ragoa-white-text.webp" class="img-fluid" style="height:24px;" alt="Ragoa">
+                </a>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="~/Scripts/About.js"></script>
