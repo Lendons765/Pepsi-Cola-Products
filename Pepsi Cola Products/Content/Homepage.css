@@ -1,4 +1,4 @@
-﻿* {
+﻿/** {
     transition: all 0.35s ease-in-out;
 }
 
@@ -13,7 +13,7 @@ html {
 body {
     scroll-snap-type: y mandatory;
 }
-
+*/
 
 
 /* ------------------ NAVBAR ------------------ */
@@ -153,7 +153,7 @@ body {
 
         .brand-item:hover img {
             transform: translateY(-100px) scale(1.04);
-            box-shadow: 0 0px 0px rgba(0,0,0,0.35);
+/*            box-shadow: 0 0px 0px rgba(0,0,0,0.35);*/
         }
 
 /* Smooth dim effect */
@@ -218,3 +218,15 @@ footer a {
         text-align: center;
     }
 }
+
+
+/* Social Icons Animation */
+.social-icon {
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+    .social-icon:hover {
+        transform: scale(1.25) rotate(-5deg);
+        filter: brightness(1.2);
+    }

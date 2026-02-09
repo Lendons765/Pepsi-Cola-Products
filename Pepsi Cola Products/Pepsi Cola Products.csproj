@@ -198,9 +198,12 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Homepage.css" />
+    <Content Include="Content\Login.css" />
+    <Content Include="Content\Registration.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Resources\Database.txt" />
     <Content Include="Resources\Images\Pepsi-logo.png" />
     <Content Include="Scripts\About.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />

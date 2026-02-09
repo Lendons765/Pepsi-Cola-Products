@@ -1,22 +1,59 @@
-﻿<div class="container-fluid min-vh-100">
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<link rel="stylesheet" href="~/Content/Login.css" />
+
+<div class="container-fluid min-vh-100">
     <div class="row h-100">
 
         <!-- LEFT BRANDING -->
-        <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center bg-primary text-white">
-            <div class="text-center">
-                <img src="~/Resources/images/pepsi-logo.png"
-                     style="max-width:180px"
-                     class="mb-3" />
-                <h2 class="fw-bold">WELCOME TO<br>PEPSI COLA</h2>
-                <p class="opacity-75">
-                    Refresh your experience with every order 🥤
+        <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center pepsi-bg text-white slide-left">
+            <div class="text-center px-4">
+
+                <!-- Pepsi Logo -->
+                <img src="~/Resources/images/Pepsi-logo.png"
+                     class="mb-4 pepsi-logo"
+                     alt="Pepsi Logo" />
+
+                <!-- Main Title -->
+                <h1 class="fw-bold display-5 mb-3">
+                    Welcome to<br>
+                    <span class="text-white-75">Pepsi Cola</span>
+                </h1>
+
+                <!-- Subtitle / Tagline -->
+                <p class="fs-5 opacity-75 mb-4">
+                    Refresh your experience with every sip 🥤
                 </p>
+
+                <!-- Optional Secondary tagline -->
+                <div class="small opacity-50 mb-4">
+                    Taste the bold. Feel the refresh.
+                </div>
+
+                <!-- Animated Bubbles (Optional, pure CSS) -->
+                <div class="pepsi-bubbles">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <!-- Call to Action Button -->
+                <a href="@Url.Action("Index","Home")" class="btn btn-outline-light btn-lg mt-3 shadow-sm">
+                    Explore Now
+                </a>
+
             </div>
         </div>
 
+
         <!-- RIGHT LOGIN CARD -->
-        <div class="col-lg-6 d-flex align-items-center justify-content-center">
-            <div class="card shadow p-4" style="width:100%; max-width:420px;">
+        <div class="col-lg-6 d-flex align-items-center justify-content-center fade-up">
+            <div class="card shadow p-4 login-card" style="width:100%; max-width:420px;">
 
                 <a href="@Url.Action("Index","Home")"
                    class="btn btn-outline-primary btn-sm mb-3">
@@ -25,18 +62,18 @@
 
                 <h3 class="fw-bold mb-1">Sign In</h3>
                 <p class="text-muted mb-4">
-                    Login using your User ID and password
+                    Login using your username and password
                 </p>
 
                 <form method="post" action="/Account/Login">
 
-                    <!-- USER ID -->
+                    <!-- USERNAME -->
                     <div class="mb-3">
-                        <label class="form-label">UserName</label>
+                        <label class="form-label">Username</label>
                         <input type="text"
                                name="username"
                                class="form-control"
-                               placeholder="Enter your Username"
+                               placeholder="Enter your username"
                                required />
                     </div>
 
@@ -44,7 +81,7 @@
                     <div class="mb-3">
                         <label class="form-label">Password</label>
                         <input type="password"
-                               name="Password"
+                               name="password"
                                class="form-control"
                                placeholder="Enter your password"
                                required />
@@ -53,21 +90,19 @@
                     <!-- OPTIONS -->
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                            <input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe">
                             <label class="form-check-label" for="rememberMe">
                                 Keep me logged in
                             </label>
                         </div>
 
-                        <a href="@Url.Action("ForgotPassword", "Account")"
-                           class="small">
+                        <a href="@Url.Action("ForgotPassword", "Account")" class="small">
                             Forgot password?
                         </a>
                     </div>
 
                     <!-- LOGIN BUTTON -->
-                    <button type="submit"
-                            class="btn btn-primary w-100">
+                    <button type="submit" class="btn btn-primary w-100">
                         Log In
                     </button>
 
@@ -75,9 +110,7 @@
 
                     <p class="text-center mb-0">
                         Don’t have an account?
-                        <a href="@Url.Action("Register","Account")">
-                            Create one
-                        </a>
+                        <a href="@Url.Action("Register","Account")">Create one</a>
                     </p>
 
                     @if (ViewBag.Message != null)
@@ -93,3 +126,5 @@
 
     </div>
 </div>
+
+

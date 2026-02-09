@@ -3,39 +3,108 @@
     ViewBag.Title = "Register";
 }
 
-<div class="register-right">
-    <div class="register-card">
+<link rel="stylesheet" href="~/Content/Registration.css" />
 
-        <h2>Create Account</h2>
-        <p class="sub-text">
-            Already have an account?
-            <a href="@Url.Action("Login","Account")">Sign in</a>
-        </p>
+<div class="container-fluid min-vh-100">
+    <div class="row h-100">
 
-        <form method="post" action="/Account/Register">
+        <!-- LEFT BRANDING -->
+        <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center pepsi-bg text-white slide-left">
+            <div class="text-center px-4">
 
-            <div class="form-row">
-                <input type="text" name="FirstName" placeholder="First Name" required />
-                <input type="text" name="LastName" placeholder="Last Name" required />
+                <!-- Pepsi Logo -->
+                <img src="~/Resources/images/Pepsi-logo.png"
+                     class="mb-4 pepsi-logo"
+                     alt="Pepsi Logo" />
+
+                <!-- Main Title -->
+                <h1 class="fw-bold display-5 mb-3">
+                    Welcome to<br>
+                    <span class="text-white-75">Pepsi Cola</span>
+                </h1>
+
+                <!-- Subtitle / Tagline -->
+                <p class="fs-5 opacity-75 mb-4">
+                    Refresh your experience with every sip 🥤
+                </p>
+
+                <!-- Optional Secondary tagline -->
+                <div class="small opacity-50 mb-4">
+                    Taste the bold. Feel the refresh.
+                </div>
+
+                <!-- Animated Bubbles -->
+                <div class="pepsi-bubbles">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <!-- Call to Action Button -->
+                <a href="@Url.Action("Index","Home")" class="btn btn-outline-light btn-lg mt-3 shadow-sm">
+                    Explore Now
+                </a>
+
             </div>
+        </div>
 
-            <div class="form-row">
-                <input type="email" name="Email" placeholder="Email Address" required />
-                @*<input type="text" name="phonenumber" placeholder="Phone Number" required />*@
+
+        <!-- RIGHT REGISTER CARD -->
+        <div class="col-lg-6 d-flex align-items-center justify-content-center slide-right">
+            <div class="card shadow-lg p-5 rounded-4" style="width:100%; max-width:480px;">
+
+                <h2 class="fw-bold mb-2">Create Account</h2>
+                <p class="text-muted mb-4">
+                    Already have an account?
+                    <a href="@Url.Action("Login","Account")">Sign in</a>
+                </p>
+
+                <form method="post" action="/Account/Register">
+
+                    <!-- Name -->
+                    <div class="row g-3 mb-3">
+                        <div class="col">
+                            <input type="text" name="FirstName" class="form-control" placeholder="First Name" required />
+                        </div>
+                        <div class="col">
+                            <input type="text" name="LastName" class="form-control" placeholder="Last Name" required />
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <input type="email" name="Email" class="form-control" placeholder="Email Address" required />
+                    </div>
+
+                    <!-- Username & Password -->
+                    <div class="row g-3 mb-4">
+                        <div class="col">
+                            <input type="text" name="username" class="form-control" placeholder="Username" required />
+                        </div>
+                        <div class="col">
+                            <input type="password" name="Password" class="form-control" placeholder="Password" required />
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn-primary w-100 py-2">
+                        Register
+                    </button>
+
+                    <!-- Message -->
+                    @if (ViewBag.Message != null)
+                    {
+                        <div class="alert alert-danger mt-3 text-center">
+                            @ViewBag.Message
+                        </div>
+                    }
+
+                </form>
+
             </div>
-
-            <div class="form-row">
-                <input type="text" name="username" placeholder="username" required />
-                <input type="password" name="Password" placeholder="Password" required />
-            </div>
-
-            @*<input type="date" name="birthdate" id="birthdate" required />*@
-
-
-            <button type="submit">Register</button>
-
-            <div class="message">@ViewBag.Message</div>
-        </form>
+        </div>
 
     </div>
 </div>

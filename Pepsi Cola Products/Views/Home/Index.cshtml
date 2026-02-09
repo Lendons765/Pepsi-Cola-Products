@@ -15,9 +15,11 @@
 
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="@Url.Action("Index", "Home")">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="@Url.Action("About", "Home")">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+
             </ul>
 
             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#address">
@@ -72,7 +74,10 @@
 
 
             <div class="hero-content">
-                <h1 class="fw-bold display-6 mb-4">
+                <h1 class="fw-bold display-6 mb-4 text-center">
+                    Welcome To
+                </h1>
+                <h1 class="fw-bold display-6 mb-4 mt-1">
                     Pepsi-Cola Products Philippines Inc.
                 </h1>
 
@@ -245,11 +250,26 @@
         <div class="container text-center">
 
             <!-- Social icons -->
-            <div class="mb-4 d-flex justify-content-center gap-3">
-                <a href="#"><img src="https://pepsiphilippines.com/images/logo/fb.png" class="img-fluid" style="height:40px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.25)'" onmouseout="this.style.transform='scale(1)'" alt="Facebook"></a>
-                <a href="#"><img src="https://pepsiphilippines.com/images/logo/ig.png" class="img-fluid" style="height:40px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.25)'" onmouseout="this.style.transform='scale(1)'" alt="Instagram"></a>
-                <a href="#"><img src="https://pepsiphilippines.com/images/logo/tw.png" class="img-fluid" style="height:40px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.25)'" onmouseout="this.style.transform='scale(1)'" alt="Twitter"></a>
+            <div class="mb-4 d-flex justify-content-center gap-3 social-icons">
+                <a href="https://www.facebook.com/PepsiPhilippines/" target="_blank" aria-label="Pepsi Philippines Facebook">
+                    <img src="https://pepsiphilippines.com/images/logo/fb.png"
+                         class="img-fluid social-icon"
+                         alt="Facebook">
+                </a>
+
+                <a href="https://www.instagram.com/pepsiphilippines/" target="_blank" aria-label="Pepsi Philippines Instagram">
+                    <img src="https://pepsiphilippines.com/images/logo/ig.png"
+                         class="img-fluid social-icon"
+                         alt="Instagram">
+                </a>
+
+                <a href="https://x.com/pepsiphl?lang=en" target="_blank" aria-label="Pepsi Philippines Twitter/X">
+                    <img src="https://pepsiphilippines.com/images/logo/tw.png"
+                         class="img-fluid social-icon"
+                         alt="Twitter">
+                </a>
             </div>
+
 
             <!-- Navigation links -->
             <div class="mb-3 d-flex justify-content-center flex-wrap gap-2">

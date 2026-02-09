@@ -2,6 +2,7 @@
     ViewBag.Title = "About";
 }
 
+
 <link rel="stylesheet" href="~/Content/About.css" />
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -18,6 +19,7 @@
                 <li class="nav-item"><a class="nav-link active" href="@Url.Action("Index" , "Home")">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="@Url.Action("About", "Home")">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
             </ul>
 
             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#address">
@@ -26,6 +28,35 @@
         </div>
     </div>
 </nav>
+
+<div class="modal fade" id="address" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow">
+
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body text-center p-4">
+                <!-- Pepsi Logo -->
+                <img src="~/Resources/Images/Pepsi-logo.png" class="img-fluid mb-3" style="max-width:160px;" alt="Pepsi Logo">
+
+                <h2 id="addressModalLabel" class="fw-bold mb-2">Sign In or Sign Up</h2>
+                <p class="text-muted mb-4">Please log in or create an account to continue your Pepsi order.</p>
+
+                <div class="d-grid gap-3 col-10 mx-auto">
+                    <a href="@Url.Action("Register", "Account")" class="btn btn-primary btn-lg">Sign Up</a>
+                    <a href="@Url.Action("Login", "Account")" class="btn btn-outline-primary btn-lg">Sign In</a>
+                </div>
+
+                <div class="mt-4 small text-muted">
+                    By continuing, you agree to Pepsi’s <a href="#" class="text-decoration-underline">Terms & Conditions</a> and <a href="#" class="text-decoration-underline">Privacy Policy</a>.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <div class="container-fluid hero-section p-0">
     <div class="row g-0 min-vh-100">
@@ -40,7 +71,10 @@
 
 
             <div class="hero-content">
-                <h1 class="fw-bold display-5 mb-4">
+                <h1 class="fw-bold display-6 mb-4 text-center">
+                    Welcome To
+                </h1>
+                <h1 class="fw-bold display-6 mb-4 mt-1">
                     Pepsi-Cola Products Philippines Inc.
                 </h1>
 
@@ -68,12 +102,12 @@
             <div class="col-lg-6">
                 <div class="p-4 border rounded-3 shadow-sm bg-white border-rounded-shadow">
                     <p class="text-muted mb-3">
-                        Pepsi-Cola Products Philippines Inc. (PCPPI) is the exclusive manufacturer...
+                        Pepsi-Cola is one of the world’s most iconic and beloved beverage brands, known for its refreshing taste and bold, youthful spirit. First introduced in 1898, Pepsi has grown into a global brand enjoyed by millions of consumers across more than 200 countries and territories.
                     </p>
                     <p class="text-muted mb-0">
-                        Pepsi-Cola Products Philippines Inc. (PCPPI) is the exclusive manufacturer of PepsiCo beverages in the Philippines, with a relationship spanning 70 years. PCPPI's principal stockholders are Lotte Corporation, Lotte Chilsung Beverage Co. Ltd., and Quaker Global Investments B.V. PCPPI manufactures and sells well-known beverage brands: Pepsi-Cola, Mountain Dew, 7-Up, Mirinda, Mug, Gatorade, Tropicana, Lipton, Sting, Premier, Milkis, and Aquafina. It has established 13 regional operations sites across the country, serving around 20,000 direct customers that reach 740,000 outlets, and providing livelihood and employment through its extensive distribution network. <br>
+                        As part of PepsiCo, Pepsi-Cola represents innovation, creativity, and a strong connection with popular culture. The brand is recognized not only for its high-quality beverages but also for its commitment to sustainability, community development, and responsible business practices.ge brands: Pepsi-Cola, Mountain Dew, 7-Up, Mirinda, Mug, Gatorade, Tropicana, Lipton, Sting, Premier, Milkis, and Aquafina. It has established 13 regional operations sites across the country, serving around 20,000 direct customers that reach 740,000 outlets, and providing livelihood and employment through its extensive distribution network. <br>
                         <br>
-                        PCPPI is committed to create a positive impact on society with programs focused on employee and community empowerment, responsible and ethical operations, and environmental sustainability.
+                        In the Philippines, Pepsi-Cola Products Philippines Inc. (PCPPI) is the exclusive manufacturer of PepsiCo beverages, delivering a wide range of trusted and well-loved drinks to Filipino consumers. With a strong distribution network and a focus on quality, Pepsi-Cola continues to bring refreshment, excitement, and moments of enjoyment to every generation.
                     </p>
                 </div>
             </div>
@@ -81,6 +115,193 @@
         </div>
     </div>
 </section>
+
+<section class="py-5">
+    <div class="container-fluid px-4 px-xxl-5">
+        <div class="row g-4 min-vh-100">
+
+            <!-- OUR VISION -->
+            <div class="col-xl-6 scroll-left">
+                <div class="row g-0 h-100 rounded-4 overflow-hidden">
+                    <div class="col-md-4">
+                        <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300121563e9805f468a5.png"
+                             class="img-fluid h-100 w-100 object-fit-cover"
+                             alt="">
+                    </div>
+                    <div class="col-md-8 bg-primary d-flex align-items-center p-4 p-xxl-5">
+                        <div>
+                            <h3 class="fw-bold text-white mb-3">Our Vision</h3>
+                            <p class="fs-5 text-white mb-0">
+                                We aim to be the leading beverage company in the Philippines.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OUR MISSION -->
+            <div class="col-xl-6 scroll-right">
+                <div class="row g-0 h-100 rounded-4 overflow-hidden">
+                    <div class="col-md-4">
+                        <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300121563e9805f323f4.png"
+                             class="img-fluid h-100 w-100 object-fit-cover"
+                             alt="">
+                    </div>
+                    <div class="col-md-8 bg-danger d-flex align-items-center p-4 p-xxl-5">
+                        <div>
+                            <h3 class="fw-bold text-white mb-3">Our Mission</h3>
+                            <p class="fs-5 text-white">
+                                We are dedicated to drive sustainable and profitable growth by
+                                providing a wide range of quality beverages to our customers,
+                                creating superior value for our shareholders and partners,
+                                building careers for our employees, and nurturing our
+                                communities and the environment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMAGE CARD -->
+            <div class="col-xl-6 scroll-animate">
+                <div class="bg-white shadow-lg rounded-4 overflow-hidden h-100">
+                    <img src="https://sgp1.digitaloceanspaces.com/pcppicms/pcppicms/2022/june/cms/0213202300121563e9805f52d85.png"
+                         class="img-fluid w-100 h-100 object-fit-cover"
+                         alt="">
+                </div>
+            </div>
+
+            <!-- VALUES -->
+            <div class="col-xl-6 d-flex align-items-center scroll-animate">
+                <div class="ps-4 ps-xl-5 fs-4 fw-bold">
+                    Integrity<br><br>
+                    Innovation<br><br>
+                    Care and Respect<br><br>
+                    Empowerment<br><br>
+                    Excellence
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<hr />
+
+<div class="container py-5">
+    <div class="row g-4 text-white">
+
+        <!-- People Card -->
+        <div class="col-lg-4">
+            <div class="card card-hover card-fade p-4 text-start" style="background-color:#CB7E27;">
+                <h3 class="fw-bold mb-3">People</h3>
+                <p>We strive to create shared values with our employees and communities.</p>
+                <hr class="border-white opacity-75">
+                <ul class="list-unstyled">
+                    <li>Brigada Eskwela</li>
+                    <li>Volunteerism</li>
+                    <li>Livelihood Creation</li>
+                    <li>Disaster Response</li>
+                    @*<li>Partnerships</li>*@
+                </ul>
+            </div>
+        </div>
+
+        <!-- Prosperity Card -->
+        <div class="col-lg-4">
+            <div class="card card-hover card-fade p-4 text-start" style="background-color:#005CB4;">
+                <h3 class="fw-bold mb-3">Prosperity</h3>
+                <p>We commit to ethical business and responsible production.</p>
+                <hr class="border-white opacity-75">
+                <ul class="list-unstyled">
+                    <li>Packaging Innovation</li>
+                    <li>Product Innovation</li>
+                    <li>Luntiang Yaman</li>
+                    <li>Governance & Compliance</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Planet Card -->
+        <div class="col-lg-4">
+            <div class="card card-hover card-fade p-4 text-start" style="background-color:#8FC071;">
+                <h3 class="fw-bold mb-3">Planet</h3>
+                <p>We nurture the planet through responsible resource use.</p>
+                <hr class="border-white opacity-75">
+                <ul class="list-unstyled">
+                    <li>Water Reduction</li>
+                    <li>Energy Reduction</li>
+                    <li>Renewable Energy</li>
+                    <li>Plastic Footprint</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!--<div class="container py-5">
+    <div class="row g-4 text-center text-white">-->
+
+        <!-- PEOPLE -->
+        <!--<div class="col-lg-4">
+            <div class="p-4 rounded-4 h-100 shadow-lg card-animate" style="background-color:#CB7E27;">
+                <h3 class="fw-bold mb-4">People</h3>
+                <p>
+                    We strive to create shared values with our employees and communities.
+                </p>
+                <hr class="border-white opacity-75">
+                <ul class="list-unstyled mt-3">
+                    <li>Brigada Eskwela</li>
+                    <li>Volunteerism</li>
+                    <li>Livelihood Creation</li>
+                    <li>Disaster Response</li>
+                    <li>Partnerships</li>
+                </ul>
+            </div>
+        </div>-->
+
+        <!-- PROSPERITY -->
+        <!--<div class="col-lg-4">
+            <div class="p-4 rounded-4 h-100 shadow-lg card-animate" style="background-color:#005CB4;">
+                <h3 class="fw-bold mb-4">Prosperity</h3>
+                <p>
+                    We commit to ethical business and responsible production.
+                </p>
+                <hr class="border-white opacity-75">
+                <ul class="list-unstyled mt-3">
+                    <li>Packaging Innovation</li>
+                    <li>Product Innovation</li>
+                    <li>Luntiang Yaman</li>
+                    <li>Governance & Compliance</li>
+                </ul>
+            </div>
+        </div>-->
+
+        <!-- PLANET -->
+        <!--<div class="col-lg-4">
+            <div class="p-4 rounded-4 h-100 shadow-lg card-animate" style="background-color:#8FC071;">
+                <h3 class="fw-bold mb-4">Planet</h3>
+                <p>
+                    We nurture the planet through responsible resource use.
+                </p>
+                <hr class="border-white opacity-75">
+                <ul class="list-unstyled mt-3">
+                    <li>Water Reduction</li>
+                    <li>Energy Reduction</li>
+                    <li>Renewable Energy</li>
+                    <li>Plastic Footprint</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>-->
+
+
+
 
 <footer class="w-100">
     <!-- Top blue stripe -->
@@ -135,3 +356,4 @@
 </footer>
 
 <script src="~/Scripts/About.js"></script>
+

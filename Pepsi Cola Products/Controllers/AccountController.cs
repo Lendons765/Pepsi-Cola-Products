@@ -26,6 +26,11 @@ namespace Pepsi_Cola_Products.Controllers
             return View();
         }
 
+        //public ActionResult Auth()
+        //{
+        //    return View();
+        //}
+
         [HttpPost]
         public ActionResult Register(Users.Register register)
         {

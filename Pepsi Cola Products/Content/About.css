@@ -1,4 +1,25 @@
-﻿/* ------------------ HERO ------------------ */
+﻿/* ------------------ NAVBAR ------------------ */
+.navbar .nav-link {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+    .navbar .nav-link:hover {
+        color: #005CB4;
+        transform: scale(1.1);
+    }
+
+.navbar .btn-primary {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .navbar .btn-primary:hover {
+        background-color: #004a9f;
+        transform: scale(1.05);
+    }
+
+
+
+/* ------------------ HERO ------------------ */
 .hero-section {
     position: relative;
     overflow: hidden;
@@ -14,7 +35,7 @@
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: #005CB4; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,3 +90,95 @@
         text-align: center;
     }
 }
+
+
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease-out;
+}
+
+    /* When visible */
+    .scroll-animate.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+/* Slide left */
+.scroll-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.9s ease-out;
+}
+
+    .scroll-left.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+/* Slide right */
+.scroll-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.9s ease-out;
+}
+
+    .scroll-right.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+
+
+/* ------------------ FADE ON SCROLL ------------------ */
+.card-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+    .card-fade.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+/* ------------------ CARD HOVER ------------------ */
+.card-hover {
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+    .card-hover:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.15);
+    }
+
+
+/*.card-animate {
+    transition: all 0.4s ease;
+    cursor: pointer;
+    transform: scale(1);
+}*/
+
+    /* HOVER EFFECT */
+    /*.card-animate:hover {
+        transform: translateY(-15px) scale(1.05);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+    }*/
+
+    /* TEXT ANIMATION INSIDE */
+    /*.card-animate h3,
+    .card-animate p,
+    .card-animate li {
+        transition: all 0.4s ease;
+    }
+
+    .card-animate:hover h3 {
+        transform: scale(1.1);
+    }
+
+    .card-animate:hover li {
+        transform: translateX(8px);
+    }*/

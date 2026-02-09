@@ -1,0 +1,130 @@
+﻿/* Gradient Pepsi Background */
+/* Left Branding Background */
+.pepsi-bg {
+    background: linear-gradient(135deg, #005CB4 0%, #003B82 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slide Animations */
+.slide-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    animation: slideLeft 1s ease forwards;
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(80px);
+    animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Pepsi Logo */
+.pepsi-logo {
+    max-width: 160px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,.25));
+    transition: transform 0.3s;
+}
+
+    .pepsi-logo:hover {
+        transform: scale(1.1);
+    }
+
+/* Animated Bubbles */
+.pepsi-bubbles span {
+    position: absolute;
+    bottom: -50px;
+    width: 15px;
+    height: 15px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    animation: bubbleRise 6s infinite;
+}
+
+    .pepsi-bubbles span:nth-child(1) {
+        left: 20%;
+        animation-duration: 5s;
+        animation-delay: 0s;
+    }
+
+    .pepsi-bubbles span:nth-child(2) {
+        left: 40%;
+        animation-duration: 7s;
+        animation-delay: 1s;
+    }
+
+    .pepsi-bubbles span:nth-child(3) {
+        left: 60%;
+        animation-duration: 6s;
+        animation-delay: 2s;
+    }
+
+    .pepsi-bubbles span:nth-child(4) {
+        left: 80%;
+        animation-duration: 8s;
+        animation-delay: 1.5s;
+    }
+
+    .pepsi-bubbles span:nth-child(5) {
+        left: 50%;
+        animation-duration: 5s;
+        animation-delay: 0.5s;
+    }
+
+@keyframes bubbleRise {
+    0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-200px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* Card Styling */
+.card {
+    border-radius: 1rem;
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 0.5rem;
+    box-shadow: none;
+    transition: all 0.3s;
+}
+
+    .form-control:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 92, 180, 0.25);
+        border-color: #005CB4;
+    }
+
+/* Button Hover */
+.btn-primary {
+    transition: all 0.3s;
+}
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    }
